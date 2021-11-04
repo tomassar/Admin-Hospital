@@ -65,6 +65,10 @@
                     {{ __('Register') }}
                 </x-jet-button>
             </div>
+            <div class="mt-4" style="display:none;">
+                <x-jet-label for="usertype" value="{{ __('Usertype') }}" />
+                <x-jet-input id="usertype" class="block mt-1 w-full" type="text" name="usertype" :value="old('usertype')" required autocomplete="usertype"/>
+            </div>
         </form>
     </x-jet-authentication-card>
 </x-guest-layout>
