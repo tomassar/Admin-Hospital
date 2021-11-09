@@ -65,5 +65,13 @@
               <span class="menu-title">Agregar Doctor</span>
             </a>
           </li>
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="{{url('showappointment')}}">
+              <span class="menu-icon">
+                <i class="mdi mdi-file-document-box"></i>
+              </span>
+              <span class="menu-title">Citas</span>
+            </a>
+          </li>
         </ul>
       </nav>
