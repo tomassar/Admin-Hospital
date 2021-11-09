@@ -15,9 +15,10 @@
         <!-- partial -->
      
         <div class="container-fluid page-body-wrapper">
+          <div class="container" style="padding-top:50px;display:flex;flex-direction: column;align-items:center;">
                 <div align='center' style='padding:70px;'>
                     <table>
-                        <tr style='background-color:#5691838F ;'>
+                    <tr style='background-color:#FFFFFF1F ;'>
                             <th style='padding:10px;font-size:20px;color:white;'>Nombre</th>
                             <th style='padding:10px;font-size:20px;color:white;'>Teléfono</th>
                             <th style='padding:10px;font-size:20px;color:white;'>Especialidad</th>
@@ -25,7 +26,7 @@
                             <th style='padding:10px;font-size:20px;color:white;'>Acciones</th>
                         </tr>
                         @foreach($doctors as $doctor)
-                        <tr style='background-color:rgba(191, 191, 191, 0.6) ;' align='center'>
+                        <tr style='background-color:rgba(255, 255, 255, 0.11);' align='center'>
                             <td style='padding:10px;font-size:15px;color:white;'>{{$doctor->name}}</td>
                             <td style='padding:10px;font-size:15px;color:white;'>{{$doctor->phone}}</td>
                             <td style='padding:10px;font-size:15px;color:white;'>{{$doctor->speciality}}</td>
@@ -36,6 +37,7 @@
                         @endforeach
                     </table>
                 </div>
+            </div>
         </div>
           <!-- partial -->
         </div>

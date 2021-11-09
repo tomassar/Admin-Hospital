@@ -8,7 +8,7 @@
 
   <meta name="copyright" content="MACode ID, https://macodeid.com/">
 
-  <title>One Health - Medical Center HTML5 Template</title>
+  <title>Vida Saludable</title>
 
   <link rel="stylesheet" href="../assets/css/maicons.css">
 
@@ -50,7 +50,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
       <div class="container">
-        <a class="navbar-brand" href="#"><span class="text-primary">Vida</span>-Saludable</a>
+        <a class="navbar-brand" href="{{url('/')}}"><span class="text-primary">Vida</span>-Saludable</a>
 
         <form action="#">
           <div class="input-group input-navbar">
@@ -68,7 +68,7 @@
         <div class="collapse navbar-collapse" id="navbarSupport">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="index.html">Inicio</a>
+              <a class="nav-link" href="{{url('/')}}">Inicio</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="about.html">Acerca De</a>
@@ -87,7 +87,7 @@
 
             @auth
             <li class="nav-item">
-              <a class="nav-link" href="{{url('myappointment')}}" style="background-color:greenyellow; color:white;">Mis Citas</a>
+              <a class="nav-link btn btn-sm btn-primary" href="{{url('myappointment')}}" style="color:white;">Mis Citas</a>
             </li>
 
             <x-app-layout>

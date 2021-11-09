@@ -19,7 +19,7 @@
             <div class="container" style="padding-top:50px;display:flex;flex-direction: column;align-items:center;">
                 <div align='center' style='padding:70px;'>
                     <table>
-                        <tr style='background-color:#5691838F ;'>
+                        <tr style='background-color:#FFFFFF1F ;'>
                             <th style='padding:10px;font-size:20px;color:white;'>Nombre Cliente</th>
                             <th style='padding:10px;font-size:20px;color:white;'>Email</th>
                             <th style='padding:10px;font-size:20px;color:white;'>Teléfono</th>
@@ -30,7 +30,7 @@
                             <th style='padding:10px;font-size:20px;color:white;'>Acciones</th>
                         </tr>
                         @foreach($appoint as $appoints)
-                        <tr style='background-color:rgba(191, 191, 191, 0.6) ;' align='center'>
+                        <tr style='background-color:rgba(255, 255, 255, 0.11);' align='center'>
                             <td style='padding:10px;font-size:15px;color:white;'>{{$appoints->name}}</td>
                             <td style='padding:10px;font-size:15px;color:white;'>{{$appoints->email}}</td>
                             <td style='padding:10px;font-size:15px;color:white;'>{{$appoints->phone}}</td>

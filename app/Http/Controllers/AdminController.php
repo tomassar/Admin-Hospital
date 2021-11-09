@@ -7,11 +7,18 @@ use App\Models\Doctor;
 use App\Models\Appointment;
 use Notification;
 use App\Notifications\Notificacion;
+use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
 {
     public function addview(){
-        return view('admin.add_doctor');
+        if(Auth::id() && Auth::user()->usertype==1){
+            return view('admin.add_doctor');
+        }else if(Auth::id() && Auth::user()->usertype!=1){
+            return redirect()->back();
+        }else{
+            return redirect('login');
+        }
     }
 
     public function upload(Request $request){
@@ -38,8 +45,15 @@ class AdminController extends Controller
     }
 
     public function showappointment(){
-        $appoint = Appointment::all();
-        return view('admin.showappointment', compact('appoint'));
+
+        if(Auth::id() && Auth::user()->usertype==1){
+            $appoint = Appointment::all();
+            return view('admin.showappointment', compact('appoint'));
+        }else if(Auth::id() && Auth::user()->usertype!=1){
+            return redirect()->back();
+        }else{
+            return redirect('login');
+        }
     }
 
     public function approve_appointment($id){

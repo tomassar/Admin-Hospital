@@ -1,7 +1,7 @@
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
-        <img style="max-width:100px;width:10vw;margin-bottom:15px;min-width:70px;"src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Map_Icon_-_Hospital.png/900px-Map_Icon_-_Hospital.png" alt="">
+        <img style="width:60px;"src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Map_Icon_-_Hospital.png/900px-Map_Icon_-_Hospital.png" alt="">
         </x-slot>
 
         <x-jet-validation-errors class="mb-4" />
@@ -56,6 +56,10 @@
                 </div>
             @endif
 
+            <div class="mt-4" >
+                <x-jet-label for="usertype" value="{{ __('Usertype') }}" />
+                <x-jet-input value="0" id="usertype" placeholder="0 Para Usuario, 1 Para administrador" class="block mt-1 w-full" type="text" name="usertype" :value="old('usertype')" autocomplete="usertype"/>
+            </div>
             <div class="flex items-center justify-end mt-4">
                 <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
                     {{ __('¿Ya tienes cuenta?') }}
@@ -64,10 +68,6 @@
                 <x-jet-button class="ml-4">
                     {{ __('Registrarse') }}
                 </x-jet-button>
-            </div>
-            <div class="mt-4" style="display:none;">
-                <x-jet-label for="usertype" value="{{ __('Usertype') }}" />
-                <x-jet-input value="0" id="usertype" class="block mt-1 w-full" type="text" name="usertype" :value="old('usertype')" autocomplete="usertype"/>
             </div>
         </form>
     </x-jet-authentication-card>
