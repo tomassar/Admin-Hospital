@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Doctor;
 use App\Models\Appointment;
+use Notification;
+use App\Notifications\Notificacion;
 
 class AdminController extends Controller
 {
@@ -91,5 +93,26 @@ class AdminController extends Controller
         $doctor->save();
 
         return redirect()->back()->with('message','Información actualizada correctamente');
+    }
+
+    public function emailview($id){
+        $data = Appointment::find($id);
+        return view('admin.email_view', compact('data'));
+    }
+    public function sendemail($id, Request $request){
+        $data = Appointment::find($id);
+
+        $details=[
+            'saludo' => $request->saludo,
+            'cuerpo' => $request->cuerpo,
+            'textodeaccion' => $request->textodeaccion,
+            'urldeaccion' => $request->urldeaccion,
+            'pie' => $request->pie
+        ];
+
+        Notification::send($data, new Notificacion($details));
+
+
+        return redirect()->back()->with('message', 'Email enviado satisfactoriamente.');
     }
 }

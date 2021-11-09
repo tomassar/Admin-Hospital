@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -87,7 +87,7 @@
 
             @auth
             <li class="nav-item">
-              <a class="nav-link" href="{{url('myappointment')}}" style="background-color:greenyellow; color:white;">My Appointment</a>
+              <a class="nav-link" href="{{url('myappointment')}}" style="background-color:greenyellow; color:white;">Mis Citas</a>
             </li>
 
             <x-app-layout>

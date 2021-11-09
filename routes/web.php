@@ -40,4 +40,6 @@ Route::get('/showdoctor', [AdminController::class, 'showdoctor']);
 
 Route::get('/delete_doctor/{id}', [AdminController::class, 'delete_doctor']);
 Route::get('/update_doctor/{id}', [AdminController::class, 'update_doctor']);
+Route::get('/emailview/{id}', [AdminController::class, 'emailview']);
+Route::post('/sendemail/{id}', [AdminController::class, 'sendemail']);
 Route::post('/edit_doctor/{id}', [AdminController::class, 'edit_doctor']);

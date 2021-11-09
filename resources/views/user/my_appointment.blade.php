@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,9 +31,9 @@
         <div class="row">
           <div class="col-sm-8 text-sm">
             <div class="site-info">
-              <a href="#"><span class="mai-call text-primary"></span> +00 123 4455 6666</a>
+              <a href="#"><span class="mai-call text-primary"></span> +56932840219</a>
               <span class="divider">|</span>
-              <a href="#"><span class="mai-mail text-primary"></span> mail@example.com</a>
+              <a href="#"><span class="mai-mail text-primary"></span> contacto@hospital.com</a>
             </div>
           </div>
           <div class="col-sm-4 text-right text-sm">
@@ -50,14 +50,14 @@
 
     <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
       <div class="container">
-        <a class="navbar-brand" href="#"><span class="text-primary">One</span>-Health</a>
+        <a class="navbar-brand" href="#"><span class="text-primary">Vida</span>-Saludable</a>
 
         <form action="#">
           <div class="input-group input-navbar">
             <div class="input-group-prepend">
               <span class="input-group-text" id="icon-addon1"><span class="mai-search"></span></span>
             </div>
-            <input type="text" class="form-control" placeholder="Enter keyword.." aria-label="Username" aria-describedby="icon-addon1">
+            <input type="text" class="form-control" placeholder="Ingrese una palabra..." aria-label="Username" aria-describedby="icon-addon1">
           </div>
         </form>
 
@@ -68,26 +68,26 @@
         <div class="collapse navbar-collapse" id="navbarSupport">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="index.html">Home</a>
+              <a class="nav-link" href="index.html">Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">About Us</a>
+              <a class="nav-link" href="about.html">Acerca De</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="doctors.html">Doctors</a>
+              <a class="nav-link" href="doctors.html">Doctores</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="blog.html">News</a>
+              <a class="nav-link" href="blog.html">Noticias</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
+              <a class="nav-link" href="contact.html">Contacto</a>
             </li>
 
             @if(Route::has('login'))
 
             @auth
             <li class="nav-item">
-              <a class="nav-link" href="{{url('myappointment')}}" style="background-color:greenyellow; color:white;">My Appointment</a>
+              <a class="nav-link" href="{{url('myappointment')}}" style="background-color:greenyellow; color:white;">Mis Citas</a>
             </li>
 
             <x-app-layout>
@@ -96,10 +96,10 @@
 
             @else
             <li class="nav-item">
-              <a class="btn btn-primary ml-lg-3" href="{{route('login')}}">Login</a>
+              <a class="btn btn-primary ml-lg-3" href="{{route('login')}}">Iniciar Sesión</a>
             </li>
             <li class="nav-item">
-              <a class="btn btn-primary ml-lg-3" href="{{route('register')}}">Register</a>
+              <a class="btn btn-primary ml-lg-3" href="{{route('register')}}">Registrarse</a>
             </li>
 
             @endauth

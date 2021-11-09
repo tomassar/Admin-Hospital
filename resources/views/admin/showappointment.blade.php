@@ -38,7 +38,7 @@
                             <td style='padding:10px;font-size:15px;color:white;'>{{$appoints->date}}</td>
                             <td style='padding:10px;font-size:15px;color:white;'>{{$appoints->message}}</td>
                             <td style='padding:10px;font-size:15px;color:white;'>{{$appoints->status}}</td>
-                            <td style='padding:10px;font-size:15px;color:white;'><a class="btn btn-sm btn-success" href="{{url('approve',$appoints->id)}}">Aprobar</a><a class="btn btn-sm btn-danger" href="{{url('cancel_appointment',$appoints->id)}}">Cancelar</a></td>
+                            <td style='padding:10px;font-size:15px;color:white;'><a class="btn btn-sm btn-success" style="margin-bottom:5px;" href="{{url('approve',$appoints->id)}}">Aprobar</a><a class="btn btn-sm btn-danger" style="margin-bottom:5px;" href="{{url('cancel_appointment',$appoints->id)}}">Cancelar</a><a class="btn btn-sm btn-primary" href="{{url('emailview',$appoints->id)}}">Email</a></td>
                         </tr>
 
                         @endforeach
