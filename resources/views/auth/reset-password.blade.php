@@ -1,7 +1,7 @@
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
-            <x-jet-authentication-card-logo />
+         <img style="max-width:100px;width:10vw;margin-bottom:15px;min-width:70px;"src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Map_Icon_-_Hospital.png/900px-Map_Icon_-_Hospital.png" alt="">
         </x-slot>
 
         <x-jet-validation-errors class="mb-4" />
@@ -17,18 +17,18 @@
             </div>
 
             <div class="mt-4">
-                <x-jet-label for="password" value="{{ __('Password') }}" />
+                <x-jet-label for="password" value="{{ __('Contraseña') }}" />
                 <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
             </div>
 
             <div class="mt-4">
-                <x-jet-label for="password_confirmation" value="{{ __('Confirm Password') }}" />
+                <x-jet-label for="password_confirmation" value="{{ __('Confirmar Contraseña') }}" />
                 <x-jet-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password" />
             </div>
 
             <div class="flex items-center justify-end mt-4">
                 <x-jet-button>
-                    {{ __('Reset Password') }}
+                    {{ __('Cambiar Contraseña') }}
                 </x-jet-button>
             </div>
         </form>
