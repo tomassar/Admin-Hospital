@@ -45,7 +45,27 @@ class HomeController extends Controller
         if(Auth::id()){
             $data->user_id = Auth::user()->id;
         }
-
+        
+        $data->save();
         return redirect()->back()->with('message','Cita agendada correctamente, te contactaremos pronto');
+    }
+
+    public function myappointment(Request $request){
+        if(Auth::id()){
+            $userid=Auth::user()->id;
+
+            $appoint=Appointment::where('user_id',$userid)->get();
+            return view('user.my_appointment', compact('appoint'));
+        }else{
+            return redirect()->back();
+        }
+    }
+
+    public function cancel_appoint($id){
+        $data = appointment::find($id);
+
+        $data->delete();
+
+        return redirect()->back();
     }
 }
